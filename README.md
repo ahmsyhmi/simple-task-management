@@ -19,4 +19,4 @@ Frontend:
 + Forms for adding and editing tasks.
 + A login and registration form.
 
-+ Database : MongoDB +
++ Database : MongoDB 
