@@ -2,26 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body{
+    @apply font-primary bg-primary text-secondary leading-loose font-bold mx-4;
+  }
+  :hover.btn{
+    text-shadow: 0px 0px 10px rgb(0, 138, 218);
+  }
+  .header{
+    font-size:3rem;
+    text-transform: uppercase;
+    background-image: url('./assets/colorful-background-1.jpg');
+    background-color: white;
+    background-size: cover;
+    background-clip: text;
+    color:transparent;
+    animation:animate 10s linear infinite;
+  }
+  @keyframes animate {
+    to {
+        background-position-x: 100px;
+    }
   }
 }
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.btn{
+  font-size:15px;
 }
